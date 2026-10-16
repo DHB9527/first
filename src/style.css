@@ -1,0 +1,40 @@
+/* 全局样式：CSS 变量定义亮/暗主题 */
+:root {
+  --bg: #f0f2f5;
+  --card: #ffffff;
+  --text: #1f2329;
+  --sub: #646a73;
+  --border: #dee0e3;
+  --accent: #4c89f7;
+  --accent-soft: #e8f0ff;
+  --tag-bg: #eef1f5;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+html.dark {
+  --bg: #14161a;
+  --card: #1d2026;
+  --text: #e6e8ec;
+  --sub: #9aa0aa;
+  --border: #2d3138;
+  --accent: #5c94fc;
+  --accent-soft: #23304a;
+  --tag-bg: #262b33;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 40px 24px;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+.wrap { max-width: 960px; margin: 0 auto; }
+.fade-enter-active, .fade-leave-active { transition: all 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(-8px); }
+@media (max-width: 520px) {
+  .profile { flex-direction: column; text-align: center; }
+  .projects { grid-template-columns: 1fr; }
+}
